@@ -1,0 +1,13 @@
+version: '3.5'
+
+services:
+
+  guacamole-postgres:
+    build: .
+    image: flaviostutz/guacamole-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=guacamole
+      - POSTGRES_USER=guacamole
+      - POSTGRES_PASSWORD=guacamole123
